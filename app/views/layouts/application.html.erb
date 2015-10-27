@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="clearfix">
+    <div class="container">
+      <div class="pull-left">
+        <%= link_to root_path do %>
+          <img class="logo" src="/assets/nyan.gif">
+          catsssss!!!!
+        <% end %>
+      </div>
+      <div class="pull-right">
+        <%= link_to 'Create cat', new_cat_path %>
+      </div>
+    </div>
+  </header>
 
-<%= yield %>
+  <main>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </main>
+  <footer>
+    <div class="container"></div>
+  </footer>
 
 </body>
 </html>
